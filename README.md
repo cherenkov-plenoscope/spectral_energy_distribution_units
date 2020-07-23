@@ -38,3 +38,9 @@ x_target, y_target = sed.convert_units(
 ```
 pip install ./spectral_energy_distribution_units
 ```
+
+## Example usage
+See unit-tests
+```./spectral_energy_distribution_units/tests/test_convert.py```
+to reproduce the upper figures A, B, C, and D.
+
