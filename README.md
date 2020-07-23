@@ -50,8 +50,7 @@ D = {
 }
 ```
 # Solution
-This function converts between the two styles ```A``` and ```B```.
-It transforms the numeric values in the arrays ```x```-axis, and ```y```-axis from style ```A``` to ```B```.
+This function transforming the numeric values in the arrays ```x```-axis, and ```y```-axis from style ```A``` to ```B```.
 
 ```python
 import spectral_energy_distribution_units as sed
