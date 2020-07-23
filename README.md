@@ -10,7 +10,7 @@ The same SED can have different styles and units:
 | <img src="readme/sed_cosmic_ray_style.jpg" width="360"> | <img src="readme/sed_crab_style.jpg" width="360"> |
 
 
-This function converts between them
+This function converts between them:
 ```python
 import spectral_energy_distribution_units as sed
 
