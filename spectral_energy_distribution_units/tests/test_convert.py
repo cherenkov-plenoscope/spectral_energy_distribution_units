@@ -1,11 +1,8 @@
 import spectral_energy_distribution_units as sed_units
+import pytest
 import numpy as np
 import os
 import pkg_resources
-
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 DIFFERENTIAL_FLUX_STR = "$\\frac{\\mathrm{d}N}{\\mathrm{d}E}$"
 
@@ -66,7 +63,12 @@ FERMI_SED_STYLE = {
     "y_unit": "erg$^{2}$ (cm)$^{-2}$ s$^{-1}$ erg$^{-1}$",
 }
 
+@pytest.mark.nottravis
 def test_plot_styles():
+
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
 
     crab_sed_path = pkg_resources.resource_filename(
         'spectral_energy_distribution_units',
