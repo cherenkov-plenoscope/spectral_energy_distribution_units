@@ -50,18 +50,20 @@ D = {
 }
 ```
 # Solution
-This function converts between the styles:
+This function converts between the two styles ```A``` and ```B```.
+It transforms the numeric values in the arrays ```x```-axis, and ```y```-axis from style ```A``` to ```B```.
+
 ```python
 import spectral_energy_distribution_units as sed
 
 x_B, y_B = sed.convert_units_with_style(x=x_A, y=y_A, input_style=A, target_style=B)
 ```
-There is also the explicit call with the dictionaries unpacked:
+
+Find also a function for the style-dictionaries ```A``` and ```B``` being given explicitly:
 ```python
 
-x_B, y_B = sed.convert_units(x=x_A, y=y_A, ... )
+x_B, y_B = sed.convert_units(x=x_A, y=y_A, x_energy_in_eV=... )
 ```
-Thats all. It does only transforms the styles of the numeric ```x```-axis, and ```y```-axis.
 
 ## Install
 ```
