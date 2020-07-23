@@ -14,7 +14,24 @@ This function converts between them
 ```python
 import spectral_energy_distribution_units as sed
 
-sed.convert_units()
+x_target, y_target = sed.convert_units(
+    x=x,
+    y=y,
+
+    x_energy_in_eV=1e9,
+    y_inverse_energy_in_eV=1e9,
+    y_inverse_area_in_m2=1e-4,
+    y_inverse_time_in_s=1.0,
+    y_scale_energy_in_eV=1e9,
+    y_scale_energy_power=2.0,
+
+    target_x_energy_in_eV=1e6,
+    target_y_inverse_energy_in_eV=1e6,
+    target_y_inverse_area_in_m2=1.0,
+    target_y_inverse_time_in_s=1.0,
+    target_y_scale_energy_in_eV=1e6,
+    target_y_scale_energy_power=0.0,
+)
 ```
 
 ## Install
