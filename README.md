@@ -1,11 +1,12 @@
 # Converting Spectral-Energy-Distributions SEDs
 
-The same SED can have different styles and units:
+# Problem
+The same SED can have different styles and units what can be challenging to compare. See example styles A, B, C, and D:
 | A | B |
 | - | - |
 | <img src="readme/sed_fermi_style.jpg" width="360"> | <img src="readme/sed_my_style.jpg" width="360"> |
 
-```json
+```python
 A = {
     "x_energy_in_eV": 1e6,
     "y_inverse_energy_in_eV": 624150907446.0763,
@@ -31,7 +32,13 @@ B = {
     "y_label": "$\\frac{\\mathrm{d}N}{\\mathrm{d}E}$",
     "y_unit": "m$^{-2}$ s$^{-1}$ (GeV)$^{-1}$",
 }
+```
 
+| C | D |
+| - | - |
+| <img src="readme/sed_cosmic_ray_style.jpg" width="360"> | <img src="readme/sed_crab_style.jpg" width="360"> |
+
+```python
 C = {
     "x_energy_in_eV": 1,
     "y_inverse_energy_in_eV": 1,
@@ -58,35 +65,19 @@ D = {
     "y_unit": "(TeV)$^{2}$ (cm)$^{-2}$ s$^{-1}$ (TeV)$^{-1}$",
 }
 ```
-
-| C | D |
-| - | - |
-| <img src="readme/sed_cosmic_ray_style.jpg" width="360"> | <img src="readme/sed_crab_style.jpg" width="360"> |
-
-
-This function converts between them:
+# Solution
+This function converts between the styles:
 ```python
 import spectral_energy_distribution_units as sed
 
-x_target, y_target = sed.convert_units(
-    x=x,
-    y=y,
-
-    x_energy_in_eV=1e9,
-    y_inverse_energy_in_eV=1e9,
-    y_inverse_area_in_m2=1e-4,
-    y_inverse_time_in_s=1.0,
-    y_scale_energy_in_eV=1e9,
-    y_scale_energy_power=2.0,
-
-    target_x_energy_in_eV=1e6,
-    target_y_inverse_energy_in_eV=1e6,
-    target_y_inverse_area_in_m2=1.0,
-    target_y_inverse_time_in_s=1.0,
-    target_y_scale_energy_in_eV=1e6,
-    target_y_scale_energy_power=0.0,
-)
+x_B, y_B = sed.convert_units_with_style(x=x_A, y=y_A, input_style=A, target_style=B)
 ```
+There is also the explicit call with the dictionaries unpacked:
+```python
+
+x_B, y_B = sed.convert_units(x=x_A, y=y_A, ... )
+```
+Thats all. It does only transforms the styles of the numeric ```x```-axis, and ```y```-axis.
 
 ## Install
 ```
