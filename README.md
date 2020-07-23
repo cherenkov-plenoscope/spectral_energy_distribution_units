@@ -1,6 +1,6 @@
 # Converting Spectral-Energy-Distributions SEDs
 
-# Problem
+## Problem
 The same SED can have different styles and units what can be challenging to compare. See example styles A, B, C, and D:
 | A | B |
 | - | - |
@@ -49,7 +49,7 @@ D = {
     "y_scale_energy_power": 2.0,
 }
 ```
-# Solution
+## Solution
 This function transforming the numeric values in the arrays ```x```-axis, and ```y```-axis from style ```A``` to ```B```.
 
 ```python
@@ -69,7 +69,7 @@ x_B, y_B = sed.convert_units(x=x_A, y=y_A, x_energy_in_eV=... )
 pip install ./spectral_energy_distribution_units
 ```
 
-## Example usage
+## Example
 See unit-tests
 ```./spectral_energy_distribution_units/tests/test_convert.py```
 to reproduce the upper figures A, B, C, and D.
