@@ -1,4 +1,4 @@
-# Converting Spectral-Energy-Distributions SEDs
+# Converting Spectral-Energy-Distributions (SEDs)
 
 The same SED can have different styles.
 The style effects the units and the sometimes a multiplication of the ```y```-axis with a power-law depending on the ```x```-axis.
