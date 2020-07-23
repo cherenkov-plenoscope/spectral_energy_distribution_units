@@ -1,7 +1,10 @@
 # Converting Spectral-Energy-Distributions SEDs
 
-## Problem
-The same SED can have different styles and units what can be challenging to compare. See example styles A, B, C, and D:
+The same SED can have different styles.
+The style effects the units and the sometimes a multiplication of the ```y```-axis with a power-law depending on the ```x```-axis.
+Everybody uses her own sed-style, but to compare findings we have to transform to a single style. This function helps you to transform sed-styles.
+Here are example sed-styles A, B, C, and D showing the flux of Crab, and the integral sensitivity of Fermi-LAT.
+
 | A | B |
 | - | - |
 | <img src="readme/sed_fermi_style.jpg" width="360"> | <img src="readme/sed_my_style.jpg" width="360"> |
@@ -49,8 +52,8 @@ D = {
     "y_scale_energy_power": 2.0,
 }
 ```
-## Solution
-This function transforming the numeric values in the arrays ```x```-axis, and ```y```-axis from style ```A``` to ```B```.
+## Function
+Transform the numeric values in the arrays ```x```-axis, and ```y```-axis from style ```A``` to ```B```.
 
 ```python
 import spectral_energy_distribution_units as sed
@@ -58,7 +61,7 @@ import spectral_energy_distribution_units as sed
 x_B, y_B = sed.convert_units_with_style(x=x_A, y=y_A, input_style=A, target_style=B)
 ```
 
-Find also a function for the style-dictionaries ```A``` and ```B``` being given explicitly:
+Find also a function for the style-dictionaries ```A``` and ```B``` being unpacked:
 ```python
 
 x_B, y_B = sed.convert_units(x=x_A, y=y_A, x_energy_in_eV=... )
