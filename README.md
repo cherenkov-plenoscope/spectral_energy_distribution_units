@@ -3,10 +3,10 @@
 
 # Converting Spectral-Energy-Distributions (SEDs)
 
-The same SED can have different styles.
-The style effects the units and the sometimes a multiplication of the ```y```-axis with a power-law depending on the ```x```-axis.
-Everybody uses her own sed-style, but to compare findings we have to transform to a single style. This function helps you to transform sed-styles.
-Here are example sed-styles A, B, C, and D showing the flux of Crab, and the integral sensitivity of Fermi-LAT.
+In Astronomy, SEDs can have different styles.
+The style effects the units and sometimes multiplies the ```y```-axis with a power-law depending on the ```x```-axis.
+But to compare findings we have to transform to a single style. This function helps you to transform between sed-styles.
+Here are example sed-styles A, B, C, and D showing the differential flux of Crab, and the integral sensitivity of Fermi-LAT.
 
 | A | B |
 | - | - |
