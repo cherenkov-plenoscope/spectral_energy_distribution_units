@@ -15,10 +15,10 @@ Here are example sed-styles A, B, C, and D showing the differential flux of Crab
 ```python
 A = {
     "x_energy_in_eV": 1e6,
-    "y_inverse_energy_in_eV": 624150907446.0763,
+    "y_inverse_energy_in_eV": 624150907446.0763,  # one erg
     "y_inverse_area_in_m2": 1e-4,
     "y_inverse_time_in_s": 1.0,
-    "y_scale_energy_in_eV": 624150907446.0763,
+    "y_scale_energy_in_eV": 624150907446.0763,  # one erg
     "y_scale_energy_power": 2.0,
 }
 
