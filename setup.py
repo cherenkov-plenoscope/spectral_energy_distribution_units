@@ -1,19 +1,18 @@
 import setuptools
 import os
 
-with open("README.md", "r") as f:
+with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setuptools.setup(
     name='spectral_energy_distribution_units_sebastian-achim-mueller',
-    version='0.0.0',
-    description='Converting units in  Spectral-Energy-Distributions.',
+    version='0.0.1',
+    description='Converting units in Spectral-Energy-Distributions.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Sebastian Achim Mueller',
     author_email='sebastian-achim.mueller@mpi-hd.mpg.de',
-    url='https://github.com/cherenkov-plenoscope/',
-    license='GPL v3',
+    url='https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units',
     packages=['spectral_energy_distribution_units'],
     package_data={
         'spectral_energy_distribution_units': [os.path.join('resources', '*')]
