@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/cherenkov-plenoscope/spectral_energy_distribution_units.svg?branch=master)](https://travis-ci.org/cherenkov-plenoscope/spectral_energy_distribution_units)
+[![Build Status](https://travis-ci.com/cherenkov-plenoscope/spectral_energy_distribution_units.svg?branch=master)](https://travis-ci.org/cherenkov-plenoscope/spectral_energy_distribution_units)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Converting Spectral-Energy-Distributions (SEDs)
