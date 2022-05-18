@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setuptools.setup(
-    name='spectral_energy_distribution_units',
+    name='spectral_energy_distribution_units_sebastian-achim-mueller',
     version='0.0.0',
     description='Converting units in  Spectral-Energy-Distributions.',
     long_description=long_description,
