@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name='spectral_energy_distribution_units_sebastian-achim-mueller',
-    version='0.0.1',
+    version='0.0.2',
     description='Converting units in Spectral-Energy-Distributions.',
     long_description=long_description,
     long_description_content_type='text/markdown',
