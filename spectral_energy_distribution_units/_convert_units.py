@@ -4,14 +4,12 @@ import numpy as np
 def convert_units(
     x,
     y,
-
     x_energy_in_eV,
     y_inverse_energy_in_eV,
     y_inverse_area_in_m2,
     y_inverse_time_in_s,
     y_scale_energy_in_eV,
     y_scale_energy_power,
-
     target_x_energy_in_eV,
     target_y_inverse_energy_in_eV,
     target_y_inverse_area_in_m2,
@@ -39,63 +37,58 @@ def convert_units(
     y = np.array(y)
 
     # unscale power law from input y
-    _x_in_units_of_y_scale_energy = x*(x_energy_in_eV/y_scale_energy_in_eV)
-    _y = y / (_x_in_units_of_y_scale_energy**y_scale_energy_power)
+    _x_in_units_of_y_scale_energy = x * (x_energy_in_eV / y_scale_energy_in_eV)
+    _y = y / (_x_in_units_of_y_scale_energy ** y_scale_energy_power)
 
     # convert energy axis to SI base units
-    x_eV = x*x_energy_in_eV
+    x_eV = x * x_energy_in_eV
 
     # convert differential flux axis to SI base units
     y_per_m2_per_s_per_eV = _y / (
-        y_inverse_energy_in_eV *
-        y_inverse_area_in_m2 *
-        y_inverse_time_in_s
+        y_inverse_energy_in_eV * y_inverse_area_in_m2 * y_inverse_time_in_s
     )
 
     # convert energy axis to target units
-    x_target = x_eV/target_x_energy_in_eV
+    x_target = x_eV / target_x_energy_in_eV
 
     # convert diff. flux axis to target units
     _y_target = y_per_m2_per_s_per_eV * (
-        target_y_inverse_energy_in_eV *
-        target_y_inverse_area_in_m2 *
-        target_y_inverse_time_in_s
+        target_y_inverse_energy_in_eV
+        * target_y_inverse_area_in_m2
+        * target_y_inverse_time_in_s
     )
 
-    _x_in_units_of_target_y_scale_energy = x_eV/target_y_scale_energy_in_eV
+    _x_in_units_of_target_y_scale_energy = x_eV / target_y_scale_energy_in_eV
 
-    y_target = _y_target*(
-        _x_in_units_of_target_y_scale_energy**target_y_scale_energy_power
+    y_target = _y_target * (
+        _x_in_units_of_target_y_scale_energy ** target_y_scale_energy_power
     )
 
     return x_target, y_target
 
 
 def convert_units_with_style(
-    x,
-    y,
-    input_style,
-    target_style,
+    x, y, input_style, target_style,
 ):
     inp = input_style
     tgt = target_style
     return convert_units(
         x=x,
         y=y,
-        x_energy_in_eV=inp['x_energy_in_eV'],
-        y_inverse_energy_in_eV=inp['y_inverse_energy_in_eV'],
-        y_inverse_area_in_m2=inp['y_inverse_area_in_m2'],
-        y_inverse_time_in_s=inp['y_inverse_time_in_s'],
-        y_scale_energy_in_eV=inp['y_scale_energy_in_eV'],
-        y_scale_energy_power=inp['y_scale_energy_power'],
-
-        target_x_energy_in_eV=tgt['x_energy_in_eV'],
-        target_y_inverse_energy_in_eV=tgt['y_inverse_energy_in_eV'],
-        target_y_inverse_area_in_m2=tgt['y_inverse_area_in_m2'],
-        target_y_inverse_time_in_s=tgt['y_inverse_time_in_s'],
-        target_y_scale_energy_in_eV=tgt['y_scale_energy_in_eV'],
-        target_y_scale_energy_power=tgt['y_scale_energy_power'],
+        x_energy_in_eV=inp["x_energy_in_eV"],
+        y_inverse_energy_in_eV=inp["y_inverse_energy_in_eV"],
+        y_inverse_area_in_m2=inp["y_inverse_area_in_m2"],
+        y_inverse_time_in_s=inp["y_inverse_time_in_s"],
+        y_scale_energy_in_eV=inp["y_scale_energy_in_eV"],
+        y_scale_energy_power=inp["y_scale_energy_power"],
+        target_x_energy_in_eV=tgt["x_energy_in_eV"],
+        target_y_inverse_energy_in_eV=tgt["y_inverse_energy_in_eV"],
+        target_y_inverse_area_in_m2=tgt["y_inverse_area_in_m2"],
+        target_y_inverse_time_in_s=tgt["y_inverse_time_in_s"],
+        target_y_scale_energy_in_eV=tgt["y_scale_energy_in_eV"],
+        target_y_scale_energy_power=tgt["y_scale_energy_power"],
     )
+
 
 convert_units_with_style.__doc__ = convert_units.__doc__
 convert_units_with_style.__doc__ += (
