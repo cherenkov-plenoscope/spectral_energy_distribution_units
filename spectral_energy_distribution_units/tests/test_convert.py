@@ -66,7 +66,6 @@ FERMI_SED_STYLE = {
 
 @pytest.mark.nottravis
 def test_plot_styles():
-
     import matplotlib
 
     matplotlib.use("Agg")
@@ -150,7 +149,6 @@ def test_plot_styles():
 
 
 def test_convert_forth_and_back_between_styles():
-
     styles = [
         FERMI_SED_STYLE,
         CRAB_SED_STYLE,
@@ -167,7 +165,6 @@ def test_convert_forth_and_back_between_styles():
 
     for input_style in styles:
         for target_style in styles:
-
             target_E, target_dNdE = sed_units.convert_units_with_style(
                 x=E,
                 y=dNdE,

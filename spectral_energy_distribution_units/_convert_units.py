@@ -38,7 +38,7 @@ def convert_units(
 
     # unscale power law from input y
     _x_in_units_of_y_scale_energy = x * (x_energy_in_eV / y_scale_energy_in_eV)
-    _y = y / (_x_in_units_of_y_scale_energy ** y_scale_energy_power)
+    _y = y / (_x_in_units_of_y_scale_energy**y_scale_energy_power)
 
     # convert energy axis to SI base units
     x_eV = x * x_energy_in_eV
@@ -61,14 +61,17 @@ def convert_units(
     _x_in_units_of_target_y_scale_energy = x_eV / target_y_scale_energy_in_eV
 
     y_target = _y_target * (
-        _x_in_units_of_target_y_scale_energy ** target_y_scale_energy_power
+        _x_in_units_of_target_y_scale_energy**target_y_scale_energy_power
     )
 
     return x_target, y_target
 
 
 def convert_units_with_style(
-    x, y, input_style, target_style,
+    x,
+    y,
+    input_style,
+    target_style,
 ):
     inp = input_style
     tgt = target_style
