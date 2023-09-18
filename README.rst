@@ -113,10 +113,10 @@ to reproduce the upper figures ``A`` , ``B`` , ``C`` , and ``D``.
 .. |PackStyleBlack| image:: https://img.shields.io/badge/pack%20style-black-000000.svg
     :target: https://github.com/cherenkov-plenoscope/black_pack
 
-.. |ImgSedFermi| image:: https://github.com/cherenkov-plenoscope/black_pack/blob/main/readme/sed_fermi_style.jpg?raw=True
+.. |ImgSedFermi| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_fermi_style.jpg?raw=True
 
-.. |ImgSedMy| image:: https://github.com/cherenkov-plenoscope/black_pack/blob/main/readme/sed_my_style.jpg?raw=True
+.. |ImgSedMy| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_my_style.jpg?raw=True
 
-.. |ImgSedCosmic| image:: https://github.com/cherenkov-plenoscope/black_pack/blob/main/readme/sed_cosmic_ray_style.jpg?raw=True
+.. |ImgSedCosmic| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_cosmic_ray_style.jpg?raw=True
 
-.. |ImgSedCrab| image:: https://github.com/cherenkov-plenoscope/black_pack/blob/main/readme/sed_crab_style.jpg?raw=True
+.. |ImgSedCrab| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_crab_style.jpg?raw=True
