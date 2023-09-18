@@ -64,7 +64,7 @@ FERMI_SED_STYLE = {
 }
 
 
-@pytest.mark.nottravis
+@pytest.mark.import_matplotlib
 def test_plot_styles():
     import matplotlib
 
