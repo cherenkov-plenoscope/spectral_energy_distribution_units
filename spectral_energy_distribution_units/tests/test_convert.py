@@ -2,7 +2,7 @@ import spectral_energy_distribution_units as sed_units
 import pytest
 import numpy as np
 import os
-import pkg_resources
+from importlib import resources as importlib_resources
 
 DIFFERENTIAL_FLUX_STR = "$\\frac{\\mathrm{d}N}{\\mathrm{d}E}$"
 
@@ -71,9 +71,10 @@ def test_plot_styles():
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    crab_sed_path = pkg_resources.resource_filename(
-        "spectral_energy_distribution_units",
-        os.path.join("resources", "crab_sed.txt"),
+    crab_sed_path = os.path.join(
+        importlib_resources.files("spectral_energy_distribution_units"),
+        "resources",
+        "crab_sed.txt",
     )
     _crab_sed = np.genfromtxt(crab_sed_path)
     crab_sed = sed_units.convert_units_with_style(
@@ -83,9 +84,10 @@ def test_plot_styles():
         target_style=MY_SED_STYLE,
     )
 
-    fermi_sensitivity_sed_path = pkg_resources.resource_filename(
-        "spectral_energy_distribution_units",
-        os.path.join("resources", "fermi_lat_broadband_sensitivity.txt"),
+    fermi_sensitivity_sed_path = os.path.join(
+        importlib_resources.files("spectral_energy_distribution_units"),
+        "resources",
+        "fermi_lat_broadband_sensitivity.txt",
     )
     _fermi_sensitivity_sed = np.genfromtxt(fermi_sensitivity_sed_path)
     fermi_sensitivity_sed = sed_units.convert_units_with_style(
