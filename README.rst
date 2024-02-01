@@ -1,7 +1,7 @@
 ###############################################
 Converting Spectral-Energy-Distributions (SEDs)
 ###############################################
-|TestStatus| |PyPiStatus| |BlackStyle| |PackStyleBlack|
+|TestStatus| |PyPiStatus| |BlackStyle| |BlackPackStyle| |MITLicenseBadge|
 
 
 In Astronomy, SEDs can have different styles.
@@ -110,7 +110,7 @@ to reproduce the upper figures ``A`` , ``B`` , ``C`` , and ``D``.
 .. |BlackStyle| image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 
-.. |PackStyleBlack| image:: https://img.shields.io/badge/pack%20style-black-000000.svg
+.. |BlackPackStyle| image:: https://img.shields.io/badge/pack%20style-black-000000.svg
     :target: https://github.com/cherenkov-plenoscope/black_pack
 
 .. |ImgSedFermi| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_fermi_style.jpg?raw=True
@@ -120,3 +120,6 @@ to reproduce the upper figures ``A`` , ``B`` , ``C`` , and ``D``.
 .. |ImgSedCosmic| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_cosmic_ray_style.jpg?raw=True
 
 .. |ImgSedCrab| image:: https://github.com/cherenkov-plenoscope/spectral_energy_distribution_units/blob/main/readme/sed_crab_style.jpg?raw=True
+
+.. |MITLicenseBadge| image:: https://img.shields.io/badge/License-MIT-yellow.svg
+    :target: https://opensource.org/licenses/MIT
