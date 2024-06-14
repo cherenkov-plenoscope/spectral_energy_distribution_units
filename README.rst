@@ -89,7 +89,7 @@ Install
 
 .. code-block::
 
-    pip install spectral_energy_distribution_units
+    pip install spectral-energy-distribution-units-sebastian-achim-mueller
 
 
 *******
